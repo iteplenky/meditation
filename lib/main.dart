@@ -1,34 +1,49 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-class MyApp extends StatelessWidget{
+void main() => runApp(MaterialApp(
+  home: Main(),
+));
+class Main extends StatelessWidget {
+  const Main({Key? key}) : super(key: key);
+
   @override
-  Widget build (BuildContext context){
-    return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: Scaffold(
-        appBar: AppBar(
-            title: Text('Медитация'),
-            centerTitle: true,
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Главная'),
+        backgroundColor: Colors.white24,
+      ),
+      body: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(Icons.water_damage, size: 60, ),
+                TextButton(onPressed: () {},
+                  child: Text('Главная', style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.black54,
+                  ),),
+                )
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(Icons.music_note_outlined, size: 60,),
+                TextButton(onPressed: () {},
+                  child: Text('Звуки', style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.black54,
+                  ),),
+                )
+              ],
+            ),
+          ],
         ),
-        body: Container(
-            //margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 250.0),
-            margin: EdgeInsets.fromLTRB(30.0, 540.0, 10.0, 20.0),
-          child:
-          RaisedButton.icon(onPressed: () {},
-              icon: Icon(Icons.water_damage, size: 50,),
-              label: Text('Главная')
-          )
-          //Icon(Icons.water_damage)
-          /*Text('Текст имеет смысловую нагрузку', style: TextStyle(
-                fontSize: 20,
-                color: Colors.red,
-                fontFamily: 'Times New Roman',
-            ),),*/
-          ),
-
-        ),
-      );
-
+      ),
+    );
   }
 }
