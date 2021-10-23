@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+
+class mainwindows extends StatelessWidget {
+  const mainwindows({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Главная'),
+        backgroundColor: Colors.white24,
+      ),
+      body: SafeArea(
+        child:
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton.icon(label: Text('Сон'),
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(context, '/son', (route)=>true);
+                    },
+                    icon: Icon(Icons.play_arrow))
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton.icon(label: Text('Снятие стресса'),
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(context, '/stres', (route)=>true);
+                    },
+                    icon: Icon(Icons.play_arrow))
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    ElevatedButton.icon(label: Text('Перерыв между работой'),
+                        onPressed: () {
+                          Navigator.pushNamedAndRemoveUntil(context, '/timeout', (route)=>true);
+                        },
+                        icon: Icon(Icons.play_arrow))
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.water_damage, size: 60, ),
+                    TextButton(onPressed: () {},
+                      child: Text('Главная', style: TextStyle(
+                        fontSize: 26,
+                        color: Colors.black54,
+                      ),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.music_note_outlined, size: 60,),
+                    TextButton(onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(context, '/s', (route)=>false);
+                    },
+                      child: Text('Звуки', style: TextStyle(
+                        fontSize: 26,
+                        color: Colors.black,
+                      ),),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
