@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+class stress extends StatelessWidget {
+  const stress({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Снятие стресса'),
+        backgroundColor: Colors.white24,
+      ),
+      body:
+      Column(
+        children: [
+          Text('Список звуков для снятия стресса'),
+        ],
+      ),
+    );
+  }
+}
