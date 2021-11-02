@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class stress extends StatelessWidget {
   const stress({Key? key}) : super(key: key);
@@ -11,11 +12,77 @@ class stress extends StatelessWidget {
         title: Text('Снятие стресса'),
         backgroundColor: Colors.white24,
       ),
-      body:
-      Column(
-        children: [
-          Text('Список звуков для снятия стресса'),
-        ],
+      body:SafeArea(
+        child:
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton.icon(label: Text('Снятие стресса 1',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+                  onPressed: () {
+                    final play=AudioCache();
+                    play.play('locomotive_steam_train_whistle.mp3');
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white38),
+                  ),
+                  icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton.icon(label: Text('Снятие стресса 2',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+                  onPressed: () {
+                    final play=AudioCache();
+                    play.play('locomotive_steam_train_whistle.mp3');
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white38),
+                  ),
+                  icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    OutlinedButton.icon(label: Text('Снятие стресса 3',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        final play=AudioCache();
+                        play.play('locomotive_steam_train_whistle.mp3');
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
