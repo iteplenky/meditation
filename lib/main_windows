@@ -1,7 +1,12 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/src/audio_cache.dart';
+
 
 class mainwindows extends StatelessWidget {
-  const mainwindows({Key? key}) : super(key: key);
+
+
+  //AudioCache audioCache = audioCache();
 
   @override
   Widget build(BuildContext context) {
@@ -19,21 +24,36 @@ class mainwindows extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton.icon(label: Text('Сон'),
+                OutlinedButton.icon(label: Text('Сон',
+                            style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                                ),
+                                ),
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(context, '/son', (route)=>true);
                     },
-                    icon: Icon(Icons.play_arrow))
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white38),
+                  ),
+                    icon: Icon(Icons.list_alt, size: 60, color: Colors.black,),
+                )
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton.icon(label: Text('Снятие стресса'),
+                OutlinedButton.icon(label: Text('Снятие стресса',
+                  style: TextStyle(fontSize: 20, color: Colors.black,),
+                ),
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(context, '/stres', (route)=>true);
-                    },
-                    icon: Icon(Icons.play_arrow))
+                      },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white38),
+                    ),
+                    icon: Icon(Icons.list_alt, size: 60, color: Colors.black,),
+                )
               ],
             ),
             Row(
@@ -41,11 +61,19 @@ class mainwindows extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    ElevatedButton.icon(label: Text('Перерыв между работой'),
+                    OutlinedButton.icon(label: Text('Перерыв между работой',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
                         onPressed: () {
                           Navigator.pushNamedAndRemoveUntil(context, '/timeout', (route)=>true);
                         },
-                        icon: Icon(Icons.play_arrow))
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.white38),
+                        ),
+                        icon: Icon(Icons.list_alt, size: 60, color: Colors.black,))
                   ],
                 ),
               ],
@@ -54,29 +82,32 @@ class mainwindows extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Icon(Icons.water_damage, size: 60, ),
                     TextButton(onPressed: () {},
-                      child: Text('Главная', style: TextStyle(
+                      child: Text('Главная',
+                        style: TextStyle(
                         fontSize: 26,
                         color: Colors.black54,
-                      ),
+                        ),
                       ),
                     ),
                   ],
                 ),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Icon(Icons.music_note_outlined, size: 60,),
                     TextButton(onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(context, '/s', (route)=>false);
                     },
-                      child: Text('Звуки', style: TextStyle(
+                      child: Text('Звуки',
+                        style: TextStyle(
                         fontSize: 26,
                         color: Colors.black,
-                      ),),
+                        ),
+                      ),
                     )
                   ],
                 ),
@@ -88,4 +119,5 @@ class mainwindows extends StatelessWidget {
     );
   }
 }
+
 
