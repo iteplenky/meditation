@@ -3,8 +3,8 @@ import 'dart:ffi';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-class sonlist extends StatelessWidget {
-  const sonlist({Key? key}) : super(key: key);
+class Sonlist extends StatelessWidget {
+  const Sonlist({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
