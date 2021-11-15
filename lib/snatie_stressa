@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class stress extends StatelessWidget {
-  const stress({Key? key}) : super(key: key);
+class Stress extends StatelessWidget {
+  const Stress({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
