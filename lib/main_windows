@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/src/audio_cache.dart';
 
 
-class mainwindows extends StatelessWidget {
+class Mainwindows extends StatelessWidget {
 
 
   //AudioCache audioCache = audioCache();
