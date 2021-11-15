@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled2/pages/home.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class athome extends StatefulWidget {
-  const athome({Key? key}) : super(key: key);
+class Athome extends StatefulWidget {
+  const Athome({Key? key}) : super(key: key);
 
   @override
   State<athome> createState() => _athomeState();
