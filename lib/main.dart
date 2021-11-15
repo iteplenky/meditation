@@ -9,11 +9,11 @@ void main() => runApp(MaterialApp(
 
   initialRoute: '/',
   routes: {
-    '/': (contex) => mainwindows(),
-    '/s': (context) => athome(),
-    '/son': (context) => sonlist(),
-    '/stres': (context) => stress(),
-    '/timeout': (context) => time_out(),
+    '/': (contex) => Mainwindows(),
+    '/s': (context) => Athome(),
+    '/son': (context) => Sonlist(),
+    '/stres': (context) => Stress(),
+    '/timeout': (context) => Time_out(),
   },
 ));
 
