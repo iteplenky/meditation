@@ -79,6 +79,19 @@ class Mainwindows extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Text('Совет 1: отключайтесь '
+                        'от соц.сетей',  textAlign: TextAlign.left,
+                        style: TextStyle( fontSize: 20,                      //размер шрифта
+                    ))
+                  ],
+                ),
+              ],
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
@@ -119,5 +132,3 @@ class Mainwindows extends StatelessWidget {
     );
   }
 }
-
-
