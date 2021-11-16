@@ -6,10 +6,10 @@ class Athome extends StatefulWidget {
   const Athome({Key? key}) : super(key: key);
 
   @override
-  State<athome> createState() => _athomeState();
+  State<Athome> createState() => _athomeState();
 }
 
-class _athomeState extends State<athome> {
+class _athomeState extends State<Athome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +79,18 @@ class _athomeState extends State<athome> {
                           backgroundColor: MaterialStateProperty.all(Colors.white38),
                         ),
                         icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,))
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Text('Совет 2: Закройте глаза',  textAlign: TextAlign.left,
+                        style: TextStyle( fontSize: 20,                      //размер шрифта
+                        ))
                   ],
                 ),
               ],
