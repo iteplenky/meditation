@@ -68,7 +68,7 @@ class Mainwindows extends StatelessWidget {
                       ),
                     ),
                         onPressed: () {
-                          Navigator.pushNamedAndRemoveUntil(context, '/timeout', (route)=>true);
+                          Navigator.pushNamedAndRemoveUntil(context, '/fff', (route)=>true);
                         },
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(Colors.white38),
@@ -132,3 +132,5 @@ class Mainwindows extends StatelessWidget {
     );
   }
 }
+
+
