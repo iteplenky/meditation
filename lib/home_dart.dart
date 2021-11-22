@@ -88,7 +88,7 @@ class _athomeState extends State<Athome> {
               children: [
                 Column(
                   children: [
-                    Text('Совет 2: Закройте глаза',  textAlign: TextAlign.left,
+                    Text('Совет 2: Закройте глаза, наслаждайтесь',  textAlign: TextAlign.left,
                         style: TextStyle( fontSize: 20,                      //размер шрифта
                         ))
                   ],
@@ -136,4 +136,5 @@ class _athomeState extends State<Athome> {
     );
   }
 }
+
 
