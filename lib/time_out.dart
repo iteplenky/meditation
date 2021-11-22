@@ -20,7 +20,7 @@ class Time_out extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                OutlinedButton.icon(label: Text('Перерыв между работой 1',
+                OutlinedButton.icon(label: Text('Воспоминания',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
@@ -29,6 +29,7 @@ class Time_out extends StatelessWidget {
                   onPressed: () {
                     final play=AudioCache();
                     play.play('locomotive_steam_train_whistle.mp3');
+
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
@@ -40,7 +41,7 @@ class Time_out extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                OutlinedButton.icon(label: Text('Перерыв между работой 2',
+                OutlinedButton.icon(label: Text('Послушай',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
@@ -62,7 +63,7 @@ class Time_out extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    OutlinedButton.icon(label: Text('Перерыв между работой 3',
+                    OutlinedButton.icon(label: Text('Любимое время года',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
