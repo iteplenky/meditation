@@ -20,7 +20,7 @@ class Stress extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                OutlinedButton.icon(label: Text('Снятие стресса 1',
+                OutlinedButton.icon(label: Text('Отвлекись',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
@@ -40,7 +40,7 @@ class Stress extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                OutlinedButton.icon(label: Text('Снятие стресса 2',
+                OutlinedButton.icon(label: Text('Переведи внимание',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
@@ -62,7 +62,7 @@ class Stress extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    OutlinedButton.icon(label: Text('Снятие стресса 3',
+                    OutlinedButton.icon(label: Text('Визуализируй',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
