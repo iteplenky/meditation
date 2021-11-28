@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Time_out extends StatelessWidget {
-  const Time_out({Key? key}) : super(key: key);
-
+  AudioPlayer audioPlayer = AudioPlayer();
+  AudioCache audioCache = new AudioCache();
+  AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +18,7 @@ class Time_out extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton.icon(label: Text('Воспоминания',
@@ -35,10 +36,29 @@ class Time_out extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Воспоминания',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton.icon(label: Text('Послушай',
@@ -55,14 +75,31 @@ class Time_out extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Послушай',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                  children: [
                     OutlinedButton.icon(label: Text('Любимое время года',
                       style: TextStyle(
                         fontSize: 20,
@@ -77,7 +114,24 @@ class Time_out extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(Colors.white38),
                       ),
                       icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                    )
+                    ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Любимое время года',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
                   ],
                 ),
               ],
