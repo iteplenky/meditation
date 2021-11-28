@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Stress extends StatelessWidget {
-  const Stress({Key? key}) : super(key: key);
-
+  AudioPlayer audioPlayer = AudioPlayer();
+  AudioCache audioCache = new AudioCache();
+  AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +18,7 @@ class Stress extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton.icon(label: Text('Отвлекись',
@@ -34,10 +35,29 @@ class Stress extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Отвлекись',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton.icon(label: Text('Переведи внимание',
@@ -54,14 +74,32 @@ class Stress extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Переведи внимание',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                  children: [
+
                     OutlinedButton.icon(label: Text('Визуализируй',
                       style: TextStyle(
                         fontSize: 20,
@@ -76,7 +114,24 @@ class Stress extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(Colors.white38),
                       ),
                       icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                    )
+                    ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    OutlinedButton.icon(label: Text('Визуализируй',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
+                    ),
+                      onPressed: () {
+                        advancedPlayer.pause();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      ),
+                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                    ),
                   ],
                 ),
               ],
