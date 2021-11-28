@@ -1,11 +1,12 @@
 import 'dart:ffi';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
-class Sonlist extends StatelessWidget {
-  const Sonlist({Key? key}) : super(key: key);
-
+class Dreamlist extends StatelessWidget {
+  AudioPlayer audioPlayer = AudioPlayer();
+  AudioCache audioCache = new AudioCache();
+  AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +20,10 @@ class Sonlist extends StatelessWidget {
       Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              OutlinedButton.icon(label: Text('Сон 1',
+              OutlinedButton.icon(label: Text('Путешествие',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.black,
@@ -36,13 +37,32 @@ class Sonlist extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.white38),
                 ),
                 icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  OutlinedButton.icon(label: Text('Путешествие',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+                    onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white38),
+                    ),
+                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                  ),
+                ],
+              ),
             ],
           ),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              OutlinedButton.icon(label: Text('Сон 2',
+              OutlinedButton.icon(label: Text('Успокаивающий звук природы',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.black,
@@ -56,15 +76,32 @@ class Sonlist extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.white38),
                 ),
                 icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  OutlinedButton.icon(label: Text('Успокаивающий звук природы',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+                    onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white38),
+                    ),
+                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                  ),
+                ],
+              ),
             ],
           ),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                children: [
-                  OutlinedButton.icon(label: Text('Сон 3',
+                  OutlinedButton.icon(label: Text('Наедине',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.black,
@@ -78,7 +115,24 @@ class Sonlist extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(Colors.white38),
                     ),
                     icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                  )
+                  ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  OutlinedButton.icon(label: Text('Наедине',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                    ),
+                  ),
+                    onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white38),
+                    ),
+                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
+                  ),
                 ],
               ),
             ],
@@ -89,3 +143,22 @@ class Sonlist extends StatelessWidget {
     );
   }
 }
+/*void getAudio() async{
+    var url = "C:/Users/Isus/AndroidStudioProjects/untitled2/assets";
+    if (playing){
+      var res = await audioPlayer.pause();
+      if (res == 1){
+        setState((){
+          playing = false;
+        });
+      }
+    }else{
+      var res = await audioPlayer.play(url,islocal: true);
+      if (res ==1 ){
+        setState((){
+          playing = true;
+        });
+      }
+    }
+  }
+}*/
