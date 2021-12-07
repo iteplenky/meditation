@@ -42,7 +42,9 @@ class Dreamlist extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
                   Icon(Icons.pause, size: 60, ),
-                  TextButton(onPressed: () {},
+                  TextButton(onPressed: () {
+                    advancedPlayer.pause();
+                  },
                     child: Text('Путешествие',
                       style: TextStyle(
                         fontSize: 23,
@@ -76,7 +78,9 @@ class Dreamlist extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
                   Icon(Icons.pause, size: 60, ),
-                  TextButton(onPressed: () {},
+                  TextButton(onPressed: () {
+                    advancedPlayer.pause();
+                  },
                     child: Text('Успокаивающий звук природы',
                       style: TextStyle(
                         fontSize: 20,
@@ -110,7 +114,9 @@ class Dreamlist extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
                   Icon(Icons.pause, size: 60, ),
-                  TextButton(onPressed: () {},
+                  TextButton(onPressed: () {
+                    advancedPlayer.pause();
+                  },
                     child: Text('Наедине',
                       style: TextStyle(
                         fontSize: 20,
