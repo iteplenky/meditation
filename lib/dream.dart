@@ -41,19 +41,14 @@ class Dreamlist extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  OutlinedButton.icon(label: Text('Путешествие',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
+                  Icon(Icons.pause, size: 60, ),
+                  TextButton(onPressed: () {},
+                    child: Text('Путешествие',
+                      style: TextStyle(
+                        fontSize: 23,
+                        color: Colors.black54,
+                      ),
                     ),
-                  ),
-                    onPressed: () {
-                      advancedPlayer.pause();
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white38),
-                    ),
-                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                   ),
                 ],
               ),
@@ -80,19 +75,14 @@ class Dreamlist extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  OutlinedButton.icon(label: Text('Успокаивающий звук природы',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
+                  Icon(Icons.pause, size: 60, ),
+                  TextButton(onPressed: () {},
+                    child: Text('Успокаивающий звук природы',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                      ),
                     ),
-                  ),
-                    onPressed: () {
-                      advancedPlayer.pause();
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white38),
-                    ),
-                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                   ),
                 ],
               ),
@@ -119,19 +109,14 @@ class Dreamlist extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  OutlinedButton.icon(label: Text('Наедине',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
+                  Icon(Icons.pause, size: 60, ),
+                  TextButton(onPressed: () {},
+                    child: Text('Наедине',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                      ),
                     ),
-                  ),
-                    onPressed: () {
-                      advancedPlayer.pause();
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white38),
-                    ),
-                    icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                   ),
                 ],
               ),
