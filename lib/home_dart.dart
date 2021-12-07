@@ -10,6 +10,9 @@ class Athome extends StatefulWidget {
 }
 
 class _athomeState extends State<Athome> {
+  AudioPlayer audioPlayer = AudioPlayer();
+  AudioCache audioCache = new AudioCache();
+  AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +25,8 @@ class _athomeState extends State<Athome> {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+            Column(
+            children:[
                 OutlinedButton.icon(label: Text('Звуки дождя',
                   style: TextStyle(
                     fontSize: 20,
@@ -40,10 +42,26 @@ class _athomeState extends State<Athome> {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
-              ],
+                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  Icon(Icons.pause, size: 60, ),
+                  TextButton(onPressed: () {
+                    advancedPlayer.pause();
+                  },
+                    child: Text('Звуки дождя',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              ]
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton.icon(label: Text('Звуки костра',
@@ -57,13 +75,27 @@ class _athomeState extends State<Athome> {
                     backgroundColor: MaterialStateProperty.all(Colors.white38),
                   ),
                   icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Звуки костра',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
                   children: [
                     OutlinedButton.icon(label: Text('Шум гор',
                       style: TextStyle(
@@ -78,10 +110,25 @@ class _athomeState extends State<Athome> {
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(Colors.white38),
                         ),
-                        icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,))
+                        icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,)
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:[
+                        Icon(Icons.pause, size: 60, ),
+                        TextButton(onPressed: () {
+                          advancedPlayer.pause();
+                        },
+                          child: Text('Шум гор',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
-                ),
-              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -136,5 +183,4 @@ class _athomeState extends State<Athome> {
     );
   }
 }
-
 
