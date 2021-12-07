@@ -40,19 +40,16 @@ class Time_out extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Воспоминания',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Воспоминания',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
@@ -79,19 +76,16 @@ class Time_out extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Послушай',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Послушай',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
@@ -118,19 +112,16 @@ class Time_out extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Любимое время года',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Любимое время года',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
