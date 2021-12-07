@@ -39,19 +39,16 @@ class Stress extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Отвлекись',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Отвлекись',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
@@ -78,19 +75,16 @@ class Stress extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Переведи внимание',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Переведи внимание',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
@@ -118,19 +112,16 @@ class Stress extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    OutlinedButton.icon(label: Text('Визуализируй',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
+                    Icon(Icons.pause, size: 60, ),
+                    TextButton(onPressed: () {
+                      advancedPlayer.pause();
+                    },
+                      child: Text('Визуализируй',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black54,
+                        ),
                       ),
-                    ),
-                      onPressed: () {
-                        advancedPlayer.pause();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.white38),
-                      ),
-                      icon: Icon(Icons.pause, size: 60, color: Colors.black,),
                     ),
                   ],
                 ),
