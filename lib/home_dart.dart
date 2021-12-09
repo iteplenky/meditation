@@ -1,6 +1,12 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:untitled2/main.dart';
 import 'package:untitled2/pages/home.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:untitled2/pages/main_windowsw.dart';
+
+import 'main_windowsw.dart';
 
 class Athome extends StatefulWidget {
   const Athome({Key? key}) : super(key: key);
@@ -8,18 +14,47 @@ class Athome extends StatefulWidget {
   @override
   State<Athome> createState() => _athomeState();
 }
+class SlideRightRoute extends PageRouteBuilder {
+  final Widget page;
+  SlideRightRoute({required this.page})
+      : super(
+    pageBuilder: (
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+        ) =>
+    page,
+    transitionsBuilder: (
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+        Widget child,
+        ) =>
+        SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(-1, 0),
+            end: Offset.zero,
+          ).animate(animation),
+          child: child,
+        ),
+  );
+}
 
 class _athomeState extends State<Athome> {
+
   AudioPlayer audioPlayer = AudioPlayer();
   AudioCache audioCache = new AudioCache();
   AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-      title: Text('Звуки'),
-        backgroundColor: Colors.white24,
-      ),
+    return MaterialApp(
+      theme: _light ? _lightTheme : _darkTheme,
+
+      home: Scaffold(
+        appBar: AppBar(
+        title: Text('Звуки'),
+          backgroundColor: Colors.white24,
+        ),
       body: SafeArea(
         child:
         Column(
@@ -143,6 +178,20 @@ class _athomeState extends State<Athome> {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Switch(value: _light, onChanged: (state){
+                      setState((){
+                        _light = state;
+                      });
+                    }),
+                  ],
+                ),
+              ],
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
@@ -150,7 +199,7 @@ class _athomeState extends State<Athome> {
                   children: [
                     Icon(Icons.water_damage, size: 60, ),
                     TextButton(onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(context, '/', (route)=>false);
+                      Navigator.push(context, SlideRightRoute(page: Mainwindows()));
                     },
                       child: Text('Главная',
                         style: TextStyle(
@@ -180,7 +229,25 @@ class _athomeState extends State<Athome> {
           ],
         ),
       ),
+      ),
     );
   }
 }
+bool _light = true;
+
+ThemeData _lightTheme = ThemeData(
+  accentColor: Colors.grey,
+    brightness: Brightness.light,
+    primaryColor: Colors.blue
+);
+
+ThemeData _darkTheme = ThemeData(
+  accentColor: Colors.red,
+  brightness: Brightness.dark,
+  primaryColor: Colors.amber,
+  buttonTheme: ButtonThemeData(
+    buttonColor: Colors.amber
+  )
+);
+
 
