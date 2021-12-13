@@ -9,13 +9,20 @@ class Dreamlist extends StatelessWidget {
   AudioPlayer advancedPlayer = new AudioPlayer();
   @override
   Widget build(BuildContext context) {
+    final urlImage ='https://wallpaperaccess.com/full/4609573.jpg';
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
         title: Text('Сон'),
     backgroundColor: Colors.white24,
     ),
-    body:SafeArea(
+    body:Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(urlImage),
+          fit: BoxFit.cover,
+        ),
+      ),
       child:
       Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -34,21 +41,21 @@ class Dreamlist extends StatelessWidget {
                   play.play('locomotive_steam_train_whistle.mp3');
                 },
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.white38),
+                  backgroundColor: MaterialStateProperty.all(Colors.white60),
                 ),
-                icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                icon: Icon(Icons.play_arrow, size: 60, color: Colors.white38,),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  Icon(Icons.pause, size: 60, ),
+                  Icon(Icons.pause, size: 60, color: Colors.white60,),
                   TextButton(onPressed: () {
                     advancedPlayer.pause();
                   },
                     child: Text('Путешествие',
                       style: TextStyle(
                         fontSize: 23,
-                        color: Colors.black54,
+                        color: Colors.white60,
                       ),
                     ),
                   ),
@@ -70,21 +77,21 @@ class Dreamlist extends StatelessWidget {
                   play.play('locomotive_steam_train_whistle.mp3');
                 },
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.white38),
+                  backgroundColor: MaterialStateProperty.all(Colors.white60),
                 ),
-                icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                icon: Icon(Icons.play_arrow, size: 60, color: Colors.white38,),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  Icon(Icons.pause, size: 60, ),
+                  Icon(Icons.pause, size: 60, color: Colors.white60,),
                   TextButton(onPressed: () {
                     advancedPlayer.pause();
                   },
                     child: Text('Успокаивающий звук природы',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.black54,
+                        color: Colors.white60,
                       ),
                     ),
                   ),
@@ -106,21 +113,21 @@ class Dreamlist extends StatelessWidget {
                       play.play('locomotive_steam_train_whistle.mp3');
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white38),
+                      backgroundColor: MaterialStateProperty.all(Colors.white60),
                     ),
-                    icon: Icon(Icons.play_arrow, size: 60, color: Colors.black,),
+                    icon: Icon(Icons.play_arrow, size: 60, color: Colors.white38,),
                   ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:[
-                  Icon(Icons.pause, size: 60, ),
+                  Icon(Icons.pause, size: 60, color: Colors.white60,),
                   TextButton(onPressed: () {
                     advancedPlayer.pause();
                   },
                     child: Text('Наедине',
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.black54,
+                        color: Colors.white60,
                       ),
                     ),
                   ),
